@@ -99,11 +99,6 @@ public class Question extends CodedEntity implements Serializable {
 	@Expose
 	 Attribute attribute;
 
-	@Embedded
-	@Valid
-	@Expose
-	 ContextList contextList;
-
 	@Expose
 	 String attributeCode;
 
@@ -283,20 +278,6 @@ public class Question extends CodedEntity implements Serializable {
 	 */
 	 void setAttribute(final Attribute attribute) {
 		this.attribute = attribute;
-	}
-
-	/**
-	 * @return the contextList
-	 */
-	public ContextList getContextList() {
-		return contextList;
-	}
-
-	/**
-	 * @param contextList the contextList to set
-	 */
-	public void setContextList(final ContextList contextList) {
-		this.contextList = contextList;
 	}
 
 	// /**

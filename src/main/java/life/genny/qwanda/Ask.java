@@ -137,12 +137,6 @@ public class Ask extends CoreEntity implements Serializable {
 	// @JsonInclude(Include.NON_NULL)
 	//  AnswerList answerList;
 
-	@Embedded
-	@Valid
-	@JsonInclude(Include.NON_NULL)
-	@Expose
-	 ContextList contextList;
-
 	/**
 	 * Constructor.
 	 * 
@@ -161,7 +155,6 @@ public class Ask extends CoreEntity implements Serializable {
 	public Ask(final Question aQuestion) {
 		super(aQuestion.getName());
 		setQuestion(aQuestion);
-		contextList = new ContextList(new CopyOnWriteArrayList<Context>());
 		this.disabled = false;
 		this.hidden = false;
 	}
@@ -181,7 +174,6 @@ public class Ask extends CoreEntity implements Serializable {
 		this.sourceCode = aSourceCode;
 		this.targetCode = aTargetCode;
 		this.attributeCode = aAttributeCode;
-		contextList = new ContextList(new CopyOnWriteArrayList<Context>());
 		this.disabled = false;
 		this.hidden = false;
 		this.readonly = false;
@@ -257,7 +249,6 @@ public class Ask extends CoreEntity implements Serializable {
 		this.sourceCode = aSourceCode;
 		this.targetCode = aTargetCode;
 		this.attributeCode = aQuestion.getAttributeCode();		
-		contextList = new ContextList(new CopyOnWriteArrayList<Context>());
 		this.mandatory = aMandatory;
 		this.weight = weight;
 		this.disabled = disabled;
@@ -295,19 +286,7 @@ public class Ask extends CoreEntity implements Serializable {
 	// this.answerList = answerList;
 	// }
 
-	/**
-	 * @return the contextList
-	 */
-	public ContextList getContextList() {
-		return contextList;
-	}
 
-	/**
-	 * @param contextList the contextList to set
-	 */
-	public void setContextList(final ContextList contextList) {
-		this.contextList = contextList;
-	}
 
 	/**
 	 * @return the mandatory
@@ -561,9 +540,7 @@ public class Ask extends CoreEntity implements Serializable {
 		if(ask.getChildAsks() != null && ask.getChildAsks().length > 0){
 			newAsk.childAsks = ask.getChildAsks();
 		}
-		if(ask.getContextList() != null ){
-			newAsk.contextList = ask.getContextList();
-		}
+
 		return newAsk;
 	}
 
