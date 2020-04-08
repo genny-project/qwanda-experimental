@@ -1,0 +1,149 @@
+{
+  "baseEntityAttributes": [
+    {
+      "baseEntityCode": "SBE_INTERN_COUNT",
+      "attributeCode": "PRI_CODE",
+      "attributeName": "LIKE",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 37,
+          "second": 55,
+          "nano": 644000000
+        }
+      },
+      "valueString": "PER_%",
+      "weight": 1,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_INTERN_COUNT",
+      "attributeCode": "SCH_PAGE_START",
+      "attributeName": "PageStart",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 37,
+          "second": 55,
+          "nano": 644000000
+        }
+      },
+      "valueInteger": 0,
+      "weight": 3,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_INTERN_COUNT",
+      "attributeCode": "PRI_IS_INTERN",
+      "attributeName": "=",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 37,
+          "second": 55,
+          "nano": 645000000
+        }
+      },
+      "valueBoolean": true,
+      "weight": 1,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_INTERN_COUNT",
+      "attributeCode": "SCH_PAGE_SIZE",
+      "attributeName": "PageSize",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 37,
+          "second": 55,
+          "nano": 644000000
+        }
+      },
+      "valueInteger": 20,
+      "weight": 3,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_INTERN_COUNT",
+      "attributeCode": "SCH_TITLE",
+      "attributeName": "Title",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 37,
+          "second": 55,
+          "nano": 644000000
+        }
+      },
+      "valueString": "Intern Count",
+      "weight": 5,
+      "inferred": false,
+      "privacyFlag": false
+    }
+  ],
+  "links": [],
+  "questions": [],
+  "answers": [],
+  "code": "SBE_INTERN_COUNT",
+  "index": 0,
+  "created": {
+    "date": {
+      "year": 2020,
+      "month": 4,
+      "day": 8
+    },
+    "time": {
+      "hour": 5,
+      "minute": 37,
+      "second": 55,
+      "nano": 644000000
+    }
+  },
+  "name": "Intern Count",
+  "realm": "internmatch"
+}

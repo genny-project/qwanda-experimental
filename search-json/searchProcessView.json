@@ -1,0 +1,558 @@
+{
+  "baseEntityAttributes": [
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "PRI_CODE",
+      "attributeName": "LIKE",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 317000000
+        }
+      },
+      "valueString": "PER_%",
+      "weight": 1,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_TRANSPORT",
+      "attributeName": "Transport",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 320000000
+        }
+      },
+      "weight": 13,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_DUMMY",
+      "attributeName": "Dummy",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 319000000
+        }
+      },
+      "weight": 7,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_DUMMY_TWO",
+      "attributeName": "Dummy",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 319000000
+        }
+      },
+      "weight": 9,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_MOBILE",
+      "attributeName": "Mobile",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 320000000
+        }
+      },
+      "weight": 14,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_COMPASS",
+      "attributeName": "Address",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 320000000
+        }
+      },
+      "weight": 11,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_INDUSTRY",
+      "attributeName": "Industry",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 319000000
+        }
+      },
+      "weight": 5,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "SCH_TITLE",
+      "attributeName": "Title",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 314000000
+        }
+      },
+      "valueString": "Available",
+      "weight": 5,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "SRT_PRI_CREATED",
+      "attributeName": "Created",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 314000000
+        }
+      },
+      "valueString": "ASC",
+      "weight": 1,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_STATUS_COLOR",
+      "attributeName": "Status",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 318000000
+        }
+      },
+      "weight": 1,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "SCH_PAGE_START",
+      "attributeName": "PageStart",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 313000000
+        }
+      },
+      "valueInteger": 0,
+      "weight": 3,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_EDU_PROVIDER_NAME",
+      "attributeName": "Edu Provider",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 319000000
+        }
+      },
+      "weight": 6,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_OCCUPATION",
+      "attributeName": "Occupation",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 320000000
+        }
+      },
+      "weight": 10,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_INTERN_EMAIL",
+      "attributeName": "Dummy",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 320000000
+        }
+      },
+      "weight": 16,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_EMAIL",
+      "attributeName": "Email",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 320000000
+        }
+      },
+      "weight": 15,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_INTERN_IMAGE_URL",
+      "attributeName": "Image",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 319000000
+        }
+      },
+      "weight": 2,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_NAME",
+      "attributeName": "Name",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 319000000
+        }
+      },
+      "weight": 3,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "SCH_PAGE_SIZE",
+      "attributeName": "PageSize",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 314000000
+        }
+      },
+      "valueInteger": 5,
+      "weight": 3,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_STAR_RATING",
+      "attributeName": "Rating",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 320000000
+        }
+      },
+      "weight": 12,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_STUDENT_ID",
+      "attributeName": "Student ID",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 319000000
+        }
+      },
+      "weight": 4,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "PRI_DISABLED",
+      "attributeName": "=",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 318000000
+        }
+      },
+      "valueBoolean": false,
+      "weight": 1,
+      "inferred": false,
+      "privacyFlag": false
+    },
+    {
+      "baseEntityCode": "SBE_AVAILABLE_INTERNS",
+      "attributeCode": "COL_PRI_DUMMY_ONE",
+      "attributeName": "Dummy",
+      "readonly": false,
+      "index": 0,
+      "pk": {},
+      "created": {
+        "date": {
+          "year": 2020,
+          "month": 4,
+          "day": 8
+        },
+        "time": {
+          "hour": 5,
+          "minute": 17,
+          "second": 30,
+          "nano": 319000000
+        }
+      },
+      "weight": 8,
+      "inferred": false,
+      "privacyFlag": false
+    }
+  ],
+  "links": [],
+  "questions": [],
+  "answers": [],
+  "code": "SBE_AVAILABLE_INTERNS",
+  "index": 0,
+  "created": {
+    "date": {
+      "year": 2020,
+      "month": 4,
+      "day": 8
+    },
+    "time": {
+      "hour": 5,
+      "minute": 17,
+      "second": 30,
+      "nano": 313000000
+    }
+  },
+  "name": "Available",
+  "realm": "internmatch"
+}
