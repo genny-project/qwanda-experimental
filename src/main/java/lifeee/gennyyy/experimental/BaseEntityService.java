@@ -23,8 +23,6 @@ import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
 import javax.validation.constraints.NotNull;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.Logger;
@@ -61,8 +59,6 @@ public class BaseEntityService {
   Set<String> realms = new HashSet<>(Arrays.asList("genny", "hidden"));
   String realmsStr = "internmatch";
 
-  ValidatorFactory factory = javax.validation.Validation.buildDefaultValidatorFactory();
-  Validator validator = factory.getValidator();
 
 
   public List<BaseEntity> findBySearchBE2(@NotNull final String hql) {
