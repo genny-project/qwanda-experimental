@@ -8,8 +8,8 @@ import life.genny.qwanda.datatype.LocalDateConverter;
 import life.genny.qwanda.entity.BaseEntity;
 import org.apache.logging.log4j.Logger;
 import org.javamoney.moneta.Money;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+//import org.json.simple.parser.JSONParser;
+//import org.json.simple.parser.ParseException;
 
 import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Type;
@@ -73,18 +73,18 @@ public class QwandaJsonUtils {
 	}
 	
 	
-	public static org.json.simple.JSONObject jsonStringParser(String stringifiedJsonObject) {
-		
-		org.json.simple.JSONObject obj = null;
-		if(stringifiedJsonObject != null) {
-			
-			JSONParser parser = new JSONParser();
-			try {
-				obj = (org.json.simple.JSONObject) parser.parse(stringifiedJsonObject);
-			} catch (ParseException e) {
-				e.printStackTrace();
-			}
-		}
-		return obj;	
-	}
+//	public static org.json.simple.JSONObject jsonStringParser(String stringifiedJsonObject) {
+//		
+//		org.json.simple.JSONObject obj = null;
+//		if(stringifiedJsonObject != null) {
+//			
+//			JSONParser parser = new JSONParser();
+//			try {
+//				obj = (org.json.simple.JSONObject) parser.parse(stringifiedJsonObject);
+//			} catch (ParseException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//		return obj;	
+//	}
 }
