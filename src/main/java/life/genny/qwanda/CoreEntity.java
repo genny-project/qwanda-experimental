@@ -40,7 +40,6 @@ import org.apache.logging.log4j.Logger;
 
 import com.cdi.crud.infra.model.CoreEntityInterface;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.datatype.LocalDateTimeAdapter;
 
@@ -87,7 +86,6 @@ public abstract class CoreEntity implements CoreEntityInterface, CreatedIntf, Se
 	 * Stores the Created UMT DateTime that this object was created
 	 */
 	// @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
-	@Expose
 	@Column(name = "created")
 	 LocalDateTime created;
 
@@ -96,7 +94,6 @@ public abstract class CoreEntity implements CoreEntityInterface, CreatedIntf, Se
 	 */
 	// @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
 	@Column(name = "updated")
-	@Expose
 	 LocalDateTime updated;
 
 	/**
@@ -106,7 +103,6 @@ public abstract class CoreEntity implements CoreEntityInterface, CreatedIntf, Se
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Basic(optional = false)
 	@Column(name = "id", updatable = false, nullable = false)
-	@Expose
 	 Long id;
 
 	/**
@@ -118,7 +114,6 @@ public abstract class CoreEntity implements CoreEntityInterface, CreatedIntf, Se
 	@Size(max = 128)
 	@Pattern(regexp = REGEX_NAME, message = "Must contain valid characters for name")
 	@Column(name = "name", updatable = true, nullable = true)
-	@Expose
 	 String name;
 
 	/**
@@ -130,7 +125,6 @@ public abstract class CoreEntity implements CoreEntityInterface, CreatedIntf, Se
 	@Size(max = 48)
 	@Pattern(regexp = REGEX_REALM, message = "Must contain valid characters for realm")
 	@Column(name = "realm", updatable = true, nullable = false)
-	@Expose
 	 String realm = DEFAULT_REALM;
 
 	/**

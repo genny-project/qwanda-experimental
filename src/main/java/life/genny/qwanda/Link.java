@@ -30,7 +30,6 @@ import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlTransient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.Expose;
 
 /**
  * A Link object
@@ -68,7 +67,6 @@ public class Link implements Serializable {
    * A field that stores the human readable attributecode associated with this link.
    * <p>
    */
-	@Expose
    String attributeCode;
 
  
@@ -76,14 +74,12 @@ public class Link implements Serializable {
    * A field that stores the human readable targetcode associated with this link.
    * <p>
    */
-	@Expose
    String targetCode;
 
   /**
    * A field that stores the human readable sourcecode associated with this link.
    * <p>
    */
-	@Expose
    String sourceCode;
 
 
@@ -91,17 +87,12 @@ public class Link implements Serializable {
    * A field that stores the human readable link Value associated with this link.
    * <p>
    */
-	@Expose
    String linkValue;
   
-	@Expose
    Double weight;
   
-@Expose
    String childColor;
-@Expose
    String parentColor;
-@Expose
    String rule;
 
   /**

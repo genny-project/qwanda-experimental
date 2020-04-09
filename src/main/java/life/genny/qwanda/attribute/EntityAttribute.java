@@ -13,7 +13,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-
 import javax.persistence.AssociationOverride;
 import javax.persistence.AssociationOverrides;
 import javax.persistence.Cacheable;
@@ -29,7 +28,6 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 import javax.xml.bind.annotation.XmlTransient;
-
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -38,14 +36,9 @@ import org.apache.logging.log4j.Logger;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Type;
 import org.javamoney.moneta.Money;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Range;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.annotations.Expose;
-
-import life.genny.qwanda.MoneyDeserializer;
+import io.vertx.core.json.JsonObject;
 import life.genny.qwanda.converter.MoneyConverter;
 import life.genny.qwanda.entity.BaseEntity;
 
@@ -74,19 +67,14 @@ public class EntityAttribute implements java.io.Serializable, Comparable<Object>
 			.getLogger(MethodHandles.lookup().lookupClass().getCanonicalName());
 
 	 static final long serialVersionUID = 1L;
-	@Expose
 	 String baseEntityCode;
-	@Expose
 	 String attributeCode;
-	@Expose 
 	@Transient
 	 String attributeName;
-	@Expose
 	 Boolean readonly = false;
 	
 	 String realm;
 	
-	@Expose
 	@Transient
 	@XmlTransient
 	 Integer index=0;  // used to assist with ordering 
@@ -129,7 +117,6 @@ public class EntityAttribute implements java.io.Serializable, Comparable<Object>
 	 */
 //	@XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
 	@Column(name = "created")
-	@Expose
 	 LocalDateTime created;
 
 	/**
@@ -137,7 +124,6 @@ public class EntityAttribute implements java.io.Serializable, Comparable<Object>
 	 */
 //	@XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
 	@Column(name = "updated")
-	@Expose
 	 LocalDateTime updated;
 
 	/**
@@ -147,78 +133,65 @@ public class EntityAttribute implements java.io.Serializable, Comparable<Object>
 	/**
 	 * Store the Double value of the attribute for the baseEntity
 	 */
-	@Expose
 	 Double valueDouble;
 
 	/**
 	 * Store the Boolean value of the attribute for the baseEntity
 	 */
-	@Expose
 	 Boolean valueBoolean;
 	/**
 	 * Store the Integer value of the attribute for the baseEntity
 	 */
-	@Expose
 	 Integer valueInteger;
 
 	/**
 	 * Store the Long value of the attribute for the baseEntity
 	 */
-	@Expose
 	 Long valueLong;
 
 	/**
 	 * Store the LocalDateTime value of the attribute for the baseEntity
 	 */
 //	@XmlJavaTypeAdapter(LocalTimeAdapter.class)
-	@Expose
 	 LocalTime valueTime;
 
 	/**
 	 * Store the LocalDateTime value of the attribute for the baseEntity
 	 */
 //	@XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
-	@Expose
 	 LocalDateTime valueDateTime;
 
 	/**
 	 * Store the LocalDate value of the attribute for the baseEntity
 	 */
 //	@XmlJavaTypeAdapter(LocalDateAdapter.class)
-	@Expose
 	 LocalDate valueDate;
 	
-	@Expose
 	 Range<LocalDate> valueDateRange;
 
 	/**
 	 * Store the String value of the attribute for the baseEntity
 	 */
 	@Type(type = "text")
-	@Expose
 	 String valueString;
 
 	@Column(name = "money", length = 128)
 	@Convert(converter = MoneyConverter.class)
-	@Expose
 	Money valueMoney;
 	
 	/**
 	 * Store the relative importance of the attribute for the baseEntity
 	 */
-	@Expose
 	 Double weight;
 
 	/**
 	 * Store the relative importance of the attribute for the baseEntity
 	 */
-	@Expose
 	 Boolean inferred = false;
 
 	/**
 	 * Store the privacy of this attribute , i.e. Don't display
 	 */
-	@Expose
 	 Boolean privacyFlag = false;
 
 	// @Version
@@ -703,9 +676,7 @@ public class EntityAttribute implements java.io.Serializable, Comparable<Object>
 					setValueTime(date);
 				} else if (getAttribute().getDataType().getClassName()
 						.equalsIgnoreCase(Money.class.getCanonicalName())) {
-					GsonBuilder gsonBuilder = new GsonBuilder().registerTypeAdapter(Money.class, new MoneyDeserializer());
-					Gson gson = gsonBuilder.create();
-					Money money = gson.fromJson(result, Money.class);
+					Money money = JsonObject.mapFrom(result).mapTo( Money.class);
 					setValueMoney(money);
 				} else if (getAttribute().getDataType().getClassName()
 						.equalsIgnoreCase(Integer.class.getCanonicalName())) {

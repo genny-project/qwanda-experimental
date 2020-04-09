@@ -11,9 +11,7 @@ import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.apache.logging.log4j.Logger;
-
-import com.google.gson.annotations.Expose;
-
+import io.vertx.core.json.JsonObject;
 import life.genny.qwanda.attribute.AttributeText;
 import life.genny.qwanda.entity.BaseEntity;
 import life.genny.qwanda.entity.SearchEntity;
@@ -38,7 +36,6 @@ public class QSearchEntityMessage extends QDataBaseEntityMessage  {
 		CHILD
 	}
 
-	@Expose
 	 SearchEntity parent ;
 	
 	 static final String DATATYPE_SEARCHENTITY =  QSearchEntityMessage.class.getSimpleName();
@@ -405,7 +402,7 @@ public class QSearchEntityMessage extends QDataBaseEntityMessage  {
 	 */
 	@Override
 	public String toString() {
-		return QwandaJsonUtils.toJson(this);
+		return JsonObject.mapFrom(this).toString();
 	}
 	
 }

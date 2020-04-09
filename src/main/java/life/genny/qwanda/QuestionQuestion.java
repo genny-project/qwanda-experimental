@@ -24,7 +24,6 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.converter.StringListConverter;
 import life.genny.qwanda.entity.EntityEntity;
@@ -57,47 +56,36 @@ public class QuestionQuestion implements java.io.Serializable, Comparable<Object
 	 QuestionQuestionId pk = new QuestionQuestionId();
 
 	@Column(name = "created")
-	@Expose
 	 LocalDateTime created;
 
 	/**
 	 * Stores the Last Modified UMT DateTime that this object was last updated
 	 */
 	@Column(name = "updated")
-	  @Expose
 	 LocalDateTime updated;
 
 	/**
 	 * Store the relative importance of this question link
 	 */
-	  @Expose
 	 Double weight;
 
 	 Long version = 1L;
 	
-	  @Expose
 	Boolean mandatory = false;
 	  
 	  // If this is set to true then attribute needs to be set to readonly after value set.
-	  @Expose
 	  Boolean oneshot = false;
 	  
 
-	  @Expose
 	   Boolean disabled=false;
-	  @Expose
 	   Boolean hidden = false;
 
-	  @Expose
 	   Boolean readonly = false;
 	  
-	  @Expose
 	   String realm;
 	  
-	  @Expose
 	   Boolean formTrigger;
 	  
-	  @Expose 
 	   Boolean createOnTrigger;
 	  
 	public QuestionQuestion() {

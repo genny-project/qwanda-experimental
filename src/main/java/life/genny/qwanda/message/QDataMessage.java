@@ -1,6 +1,5 @@
 package life.genny.qwanda.message;
 
-import com.google.gson.annotations.Expose;
 
 public abstract class QDataMessage extends QMessage implements QDataMessageIntf {
 
@@ -21,17 +20,13 @@ public abstract class QDataMessage extends QMessage implements QDataMessageIntf 
    *
    */
    static final String MESSAGE_TYPE = "DATA_MSG";
-  @Expose
    String data_type;
-  @Expose
    Boolean delete = false;
-  @Expose
    Boolean replace = false;
-  @Expose
    Object shouldDeleteLinkedBaseEntities;
-  @Expose
+  
    String aliasCode;
-  @Expose
+  
    String[] recipientCodeArray;
 
 

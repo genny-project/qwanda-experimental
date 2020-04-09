@@ -34,7 +34,6 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.logging.log4j.Logger;
 
-import com.google.gson.annotations.Expose;
 
 /**
  * CoreEntity represents a base level core set of class attributes. It is the
@@ -82,11 +81,9 @@ public abstract class CodedEntity extends CoreEntity {
 	@Size(max = 64)
 	@Pattern(regexp = REGEX_CODE, message = "Must be valid Code!")
 	@Column(name = "code", updatable = false, nullable = false)
-	@Expose
 	 String code;
 
 	@Transient
-	@Expose
 	 Integer index;
 
 	/**

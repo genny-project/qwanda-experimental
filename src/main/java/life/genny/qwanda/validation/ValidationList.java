@@ -31,7 +31,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.Expose;
 
 
 /**
@@ -71,7 +70,6 @@ public class ValidationList implements Serializable {
   @XmlTransient
   @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   @JoinColumn(name = "dtype_id", referencedColumnName = "id")
-  @Expose
    List<Validation> validationList = new CopyOnWriteArrayList<Validation>();
 
   public ValidationList() {

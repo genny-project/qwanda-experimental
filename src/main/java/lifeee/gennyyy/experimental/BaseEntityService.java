@@ -90,7 +90,7 @@ public class BaseEntityService {
 
   public Long findBySearchBECount(@NotNull final BaseEntity searchBE) {
     Long count = 0L;
-    final String userRealmStr = getRealm();
+    final String userRealmStr = "internmatch";
 
     String stakeholderCode = searchBE.getValue("SCH_STAKEHOLDER_CODE", null);
     String sourceStakeholderCode = searchBE.getValue("SCH_SOURCE_STAKEHOLDER_CODE", null);
@@ -180,7 +180,7 @@ public class BaseEntityService {
 
   protected String getRealm() {
 
-    return "genny"; // TODO HACK, is overridden
+    return "internmatch"; // TODO HACK, is overridden
   }
 
   private String getRealmsStr(Set<String> realms) {

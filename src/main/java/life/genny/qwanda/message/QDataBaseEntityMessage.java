@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.WeightedItem;
 import life.genny.qwanda.entity.BaseEntity;
@@ -16,24 +15,17 @@ public class QDataBaseEntityMessage extends QDataMessage implements Comparable<Q
 
 	 static final long serialVersionUID = 1L;
 	
-	@Expose
+	
 	 BaseEntity[] items;
 
-	@Expose
 	 WeightedItem[] weightedItems;
 
 	 static final String DATATYPE_BASEENTITY = BaseEntity.class.getSimpleName();
-	@Expose
 	 String parentCode;
-	@Expose
 	 String linkCode;
-	@Expose
 	 String linkValue;
-	@Expose
 	 Long total = -1L;
-	@Expose
 	 Long returnCount;
-	@Expose
 	 BaseEntity sum;
 
 	@Override

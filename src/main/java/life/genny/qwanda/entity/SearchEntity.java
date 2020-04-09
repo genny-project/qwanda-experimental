@@ -2,6 +2,7 @@ package life.genny.qwanda.entity;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
+import io.vertx.core.json.JsonObject;
 import life.genny.qwanda.attribute.AttributeBoolean;
 import life.genny.qwanda.attribute.AttributeDateTime;
 import life.genny.qwanda.attribute.AttributeDouble;
@@ -456,7 +457,7 @@ public class SearchEntity extends BaseEntity {
 	 */
 	@Override
 	public String toString() {
-		return QwandaJsonUtils.toJson(this);
+		return JsonObject.mapFrom(this).toString();
 	}
 
 

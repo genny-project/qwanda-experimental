@@ -10,6 +10,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 import life.genny.qwanda.attribute.Attribute;
 import life.genny.qwanda.attribute.AttributeText;
@@ -39,11 +40,13 @@ public class SearchExperimental {
       return findBaseEntityByCode.toString();
   }
   
+
   @POST
   @Consumes("application/json")
   @Path("/baseentitys/search")
+  @Produces("application/json")
   @Transactional
-  public String findBySearchBE(final BaseEntity searchBE) {
+  public Response findBySearchBE(final BaseEntity searchBE) {
 
           String stakeHolderCode = null;
 
@@ -60,7 +63,7 @@ public class SearchExperimental {
               }
 
           } catch (BadDataException e) {
-              return "bad";
+            return Response.status(401).entity("Bad Data Exception").build();
           }
           List<BaseEntity> results = service.findBySearchBE(searchBE);
           Long total = -1L;
@@ -90,7 +93,8 @@ public class SearchExperimental {
           }
           QDataBaseEntityMessage msg = new QDataBaseEntityMessage(beArr, parentCode, null);
           msg.setTotal(total);
-          return msg.toString();
+          String json = JsonUtils.toJson(msg);
+          return Response.status(200).entity(json).build();
 
 
   }

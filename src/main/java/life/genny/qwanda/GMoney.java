@@ -20,7 +20,6 @@ import org.javamoney.moneta.Money;
 import org.javamoney.moneta.spi.MoneyUtils;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.Expose;
 
 @Embeddable
 public class GMoney implements Serializable {
@@ -38,14 +37,12 @@ public class GMoney implements Serializable {
 	    static final RoundingMode DEFAULT_ROUNDING = RoundingMode.HALF_EVEN;
 
 	    @Column(precision=10, scale=2)
-		@Expose
 	     BigDecimal amount;
 	    
 		@NotNull
 //		@Size(max = 3)
 //		@Pattern(regexp = REGEX_CURRENCY, message = "Must be valid Currency Code!")
 //		@Column(name = "code", updatable = false, nullable = false, unique = false)
-		@Expose
 	     Currency currency;   
 	    // This value is used for magnitude sorting between monies of different currency
 		@JsonIgnore

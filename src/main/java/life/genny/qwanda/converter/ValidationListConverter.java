@@ -4,16 +4,15 @@ package life.genny.qwanda.converter;
 import java.lang.invoke.MethodHandles;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
+import java.util.stream.Collectors;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.Logger;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
+import io.vertx.core.json.JsonArray;
+import io.vertx.core.json.JsonObject;
 import life.genny.qwanda.validation.Validation;
 
 @Converter
@@ -98,7 +97,7 @@ public class ValidationListConverter implements AttributeConverter<List<Validati
 //			ret = StringUtils.removeEnd(ret, ":");
 //
 //		}
-		String ret = new Gson().toJson(list );
+		String ret = JsonObject.mapFrom(list ).toString();
 		return ret;
 
 	}
@@ -106,9 +105,12 @@ public class ValidationListConverter implements AttributeConverter<List<Validati
 	public List<String> convertFromString(final String joined) {
 		List<String> strings = new CopyOnWriteArrayList<String>();
 		if (!StringUtils.isBlank(joined)) {
-			if (joined.startsWith("{")||joined.startsWith("[")) {
-			strings = new Gson().fromJson(joined, new TypeToken<List<String>>(){}.getType());
-			} else {
+			if (joined.startsWith("[")) {
+			   strings = new JsonArray(joined).getList();//new Gson().fromJson(joined, new TypeToken<List<String>>(){}.getType());
+			} else if (joined.startsWith("{")){
+			   strings = new JsonObject(joined).getMap().entrySet().stream().map(d ->d.toString()).collect(Collectors.toList());//new Gson().fromJson(joined, new TypeToken<List<String>>(){}.getType());
+			}
+			else {
 				strings.add(joined); // single , non json Validation
 			}
 		}

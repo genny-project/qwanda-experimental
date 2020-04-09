@@ -53,7 +53,7 @@ import org.hibernate.annotations.Immutable;
 import org.hibernate.annotations.Type;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.Expose;
+//import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.attribute.Attribute;
 import life.genny.qwanda.datatype.LocalDateTimeAdapter;
@@ -124,7 +124,7 @@ public class Answer implements Serializable {
 	 */
 	// @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
 	@Column(name = "created")
-	@Expose
+//	@Expose
 	 LocalDateTime created;
 
 	/**
@@ -141,7 +141,7 @@ public class Answer implements Serializable {
 	@NotNull
 	@Type(type = "text")
 	@Column(name = "value", updatable = true, nullable = false)
-	@Expose
+//	@Expose
 	 String value;
 
 	/**
@@ -152,7 +152,7 @@ public class Answer implements Serializable {
 	@NotNull
 	@Size(max = 250)
 	@Column(name = "attributecode", updatable = true, nullable = false)
-	@Expose
+//	@Expose
 	 String attributeCode;
 
 	@JsonIgnore
@@ -173,7 +173,7 @@ public class Answer implements Serializable {
 	/**
 	 * Store the askId (if present)
 	 */
-	@Expose
+//	@Expose
 	 Long askId;
 
 	/**
@@ -184,7 +184,7 @@ public class Answer implements Serializable {
 	@NotNull
 	@Size(max = 64)
 	@Column(name = "targetcode", updatable = true, nullable = true)
-	@Expose
+//	@Expose
 	 String targetCode;
 
 	/**
@@ -195,38 +195,38 @@ public class Answer implements Serializable {
 	@NotNull
 	@Size(max = 64)
 	@Column(name = "sourcecode", updatable = true, nullable = true)
-	@Expose
+//	@Expose
 	 String sourceCode;
 
 	/**
 	 * Store the Expired boolean value of the attribute for the baseEntity
 	 */
-	@Expose
+//	@Expose
 	 Boolean expired = false;
 
 	/**
 	 * Store the Refused boolean value of the attribute for the baseEntity
 	 */
-	@Expose
+//	@Expose
 	 Boolean refused = false;
 
 	/**
 	 * Store the relative importance of the attribute for the baseEntity
 	 */
-	@Expose
+//	@Expose
 	 Double weight = 0.0;
 
 	/**
 	 * Store whether this answer was inferred
 	 */
-	@Expose
+//	@Expose
 	 Boolean inferred = false;
 
-	@Expose
+//	@Expose
 	 Boolean changeEvent = false;
 
 	@Transient
-	@Expose
+//	@Expose
 	// Provide a clue to any new attribute type that may be needed if the attribute does not exist yet, e.g. java.util.Double
 	 String dataType = null;
 	

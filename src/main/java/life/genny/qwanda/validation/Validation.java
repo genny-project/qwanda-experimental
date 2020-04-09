@@ -40,7 +40,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.hibernate.annotations.Type;
 
-import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.CodedEntity;
 import life.genny.qwanda.converter.StringListConverter;
@@ -102,23 +101,18 @@ public class Validation extends CodedEntity implements Serializable {
 	@NotNull
 	@Type(type = "text")
 	@Column(name = "regex", updatable = true, nullable = false)	
-	@Expose
 	 String regex;
 	
 	
 	@Column(name = "selection_grp",  length = 512,updatable = true, nullable = true)	
-	@Expose
 	  @Convert(converter = StringListConverter.class)	
 	 List<String> selectionBaseEntityGroupList;
 	
-	@Expose
 	 Boolean recursiveGroup = false;
 	
-	@Expose
 	 Boolean multiAllowed = false;
 
 	@Column(name = "options", length = 2048, updatable = true, nullable = true)
-	@Expose
 	 String options;
 	
 	/**

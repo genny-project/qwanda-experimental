@@ -30,9 +30,7 @@ import org.hibernate.annotations.Type;
 import org.javamoney.moneta.Money;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
+import io.vertx.core.json.JsonObject;
 import life.genny.qwanda.attribute.Attribute;
 import life.genny.qwanda.converter.MoneyConverter;
 import life.genny.qwanda.converter.StringListConverter;
@@ -344,9 +342,7 @@ public class AnswerLink implements java.io.Serializable {
 		case "Money":
 			result = answer.getValue();
 			if (!StringUtils.isBlank(result)) {
-			GsonBuilder gsonBuilder = new GsonBuilder().registerTypeAdapter(Money.class, new MoneyDeserializer());
-			Gson gson = gsonBuilder.create();
-			Money money = gson.fromJson(result, Money.class);
+			Money money = JsonObject.mapFrom(result).mapTo(Money.class);
 			setValueMoney(money);
 			} else {
 				setValueMoney(Money.zero(null));

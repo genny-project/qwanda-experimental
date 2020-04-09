@@ -42,7 +42,7 @@ import org.apache.commons.lang3.builder.CompareToBuilder;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.google.gson.annotations.Expose;
+//import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.exception.BadDataException;
 
@@ -92,44 +92,28 @@ public class Ask extends CoreEntity implements Serializable {
 	@XmlTransient
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "question_id", nullable = true)
-	@Expose
 	 Question question;
 
-	@Expose
 	 String sourceCode;
-	@Expose
 	 String targetCode;
-	@Expose
 	 String questionCode;
-	@Expose
 	 String attributeCode;
-
-	@Expose
 	 Boolean mandatory = false;
-	@Expose
 	 Boolean oneshot = false;
 
-	@Expose
 	 Boolean disabled = false;
-	@Expose
 	 Boolean hidden = false;
 
-	@Expose
 	 Boolean readonly = false;
-	@Expose
 	 Double weight = 0.0;
 
-	@Expose
 	 Long parentId = 0L;
 
-	@Expose
 	 Boolean formTrigger = false;
 	
-	@Expose
 	 Boolean createOnTrigger = false;
 
 	@Transient
-	@Expose
 	 Ask[] childAsks;
 
 	// @Embedded

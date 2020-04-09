@@ -10,7 +10,6 @@ import javax.persistence.Convert;
 import org.apache.logging.log4j.Logger;
 import org.javamoney.moneta.Money;
 
-import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.Ask;
 import life.genny.qwanda.Link;
@@ -24,13 +23,10 @@ public class EntityQuestion implements java.io.Serializable, Comparable<Object> 
 	protected static final Logger log = org.apache.logging.log4j.LogManager
 			.getLogger(MethodHandles.lookup().lookupClass().getCanonicalName());
 
-  @Expose
    String valueString;
 
-  @Expose
    Double weight;
 
-  @Expose 
 	 Link link;
 
   public EntityQuestion() {}

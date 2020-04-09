@@ -17,7 +17,6 @@
 package life.genny.qwanda.datatype;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.Expose;
 import life.genny.qwanda.converter.ValidationListConverter;
 import life.genny.qwanda.validation.Validation;
 import life.genny.qwanda.validation.ValidationList;
@@ -74,21 +73,17 @@ public class DataType implements Serializable {
 															// the BaseEntity set with parent
 	@NotNull
 	@Size(max = 120)
-	@Expose
 	 String dttCode; // e.g. java.util.String
 
 	@NotNull
 	@Size(max = 120)
-	@Expose
 	 String className; // e.g. java.util.String
 
 	@NotNull
 	@Size(max = 120)
 	// @JsonIgnore
-	@Expose
 	 String typeName; // e.g. TEXT
 
-	@Expose
 	 String inputmask;
 
 	/**
@@ -99,7 +94,6 @@ public class DataType implements Serializable {
 
 	@Column(name = "validation_list", length = 512)
 	@Convert(converter = ValidationListConverter.class)
-	@Expose
 	 List<Validation> validationList = new CopyOnWriteArrayList<Validation>();
 
 	/**

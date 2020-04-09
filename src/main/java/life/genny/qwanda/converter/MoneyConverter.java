@@ -1,17 +1,14 @@
 package life.genny.qwanda.converter;
 
 import java.lang.invoke.MethodHandles;
-
+import java.util.Objects;
+import java.util.Optional;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
 import org.apache.logging.log4j.Logger;
 import org.javamoney.moneta.Money;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import life.genny.qwanda.MoneyDeserializer;
+import io.vertx.core.json.JsonObject;
 
 @Converter
 public class MoneyConverter implements AttributeConverter<Money, String> {
@@ -22,10 +19,8 @@ public class MoneyConverter implements AttributeConverter<Money, String> {
 	@Override
 	public String convertToDatabaseColumn(final Money money) {
 		String ret = "";
-		GsonBuilder gsonBuilder = new GsonBuilder().registerTypeAdapter(Money.class, new MoneyDeserializer());
-		Gson gson = gsonBuilder.create();
 		
-		ret = gson.toJson(money);
+		ret = JsonObject.mapFrom(money).toString();
 
 
 		return ret;
@@ -34,10 +29,17 @@ public class MoneyConverter implements AttributeConverter<Money, String> {
 
 	@Override
 	public Money convertToEntityAttribute(String moneyStr) {
-		GsonBuilder gsonBuilder = new GsonBuilder().registerTypeAdapter(Money.class, new MoneyDeserializer());
-		Gson gson = gsonBuilder.create();
-		Money money = gson.fromJson(moneyStr, Money.class);
-		return money;
+//	    Optional<String> moneyStrOfNullable = Optional.ofNullable(moneyStr);
+
+//	    System.out.println(moneyStrOfNullable.isEmpty());
+//	    Money money = moneyStrOfNullable
+//	        .filter(Objects::nonNull)
+//	        .filter(d -> !d.equals("null"))
+//	        .map(JsonObject::mapFrom)
+//	        .map(d -> d.mapTo(Money.class))
+//	        .orElse(Money.of(0.0, "AUD"));
+
+		return Money.of(0.0, "AUD");
 	}
 
 

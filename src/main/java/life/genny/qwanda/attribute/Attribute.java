@@ -37,7 +37,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.CodedEntity;
 import life.genny.qwanda.datatype.DataType;
@@ -98,22 +97,16 @@ public class Attribute extends CodedEntity implements Serializable {
 
 	@Embedded
 	@NotNull
-	@Expose
 	public DataType dataType;
 	
-	@Expose
 	 Boolean defaultPrivacyFlag = false;
 
-	@Expose
 	 String description;
 	
-	@Expose
 	 String help;
 	
-	@Expose
 	 String placeholder;
 	
-	@Expose
 	 String defaultValue;
 	
 

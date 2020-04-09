@@ -2,7 +2,6 @@ package life.genny.qwanda;
 
 import java.io.Serializable;
 
-import com.google.gson.annotations.Expose;
 
 public class FileUploadDetails implements Serializable {
 
@@ -11,22 +10,16 @@ public class FileUploadDetails implements Serializable {
 	 */
 	 static final long serialVersionUID = 1L;
 	
-	@Expose
 	 String fileName;
 	
-	@Expose
 	 String uploadedFilePath;
 	
-	@Expose
 	 String uploadObjKey;
 	
-	@Expose
 	 String uploadObjValue;
 	
-	@Expose
 	 String userMetaDataObjKey;
 	
-	@Expose
 	 String userMetaDataObjValue;
 
 	/**

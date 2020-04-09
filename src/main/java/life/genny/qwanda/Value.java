@@ -13,7 +13,6 @@ import org.hibernate.annotations.Type;
 import org.javamoney.moneta.Money;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.converter.MoneyConverter;
 import life.genny.qwanda.datatype.DataType;
@@ -79,7 +78,6 @@ public Value(Object value, DataType dataType)
 
 	@Column(name = "money", length = 128)
 	@Convert(converter = MoneyConverter.class)
-	@Expose
 	Money valueMoney;
 
 	/**

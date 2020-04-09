@@ -18,7 +18,6 @@ package life.genny.qwanda;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.google.gson.annotations.Expose;
 import life.genny.qwanda.attribute.Attribute;
 import life.genny.qwanda.exception.BadDataException;
 import org.apache.logging.log4j.Logger;
@@ -95,26 +94,19 @@ public class Question extends CodedEntity implements Serializable {
 	@XmlTransient
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "attribute_id", nullable = true)
-	@Expose
 	 Attribute attribute;
 
-	@Expose
 	 String attributeCode;
 
-	@Expose
 	 Boolean mandatory = false;
 
-	@Expose
 	 Boolean readonly = false;
 
-	@Expose
 	 Boolean oneshot = false;
 	
-	@Expose
 	 String placeholder = "";
 
 	@Type(type = "text")
-	@Expose
 	 String html;
 
 	/**

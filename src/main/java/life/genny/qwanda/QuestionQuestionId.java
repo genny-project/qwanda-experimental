@@ -9,7 +9,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.entity.EntityEntityId;
 
@@ -27,9 +26,7 @@ public class QuestionQuestionId implements java.io.Serializable {
 	@JsonIgnore
 	 Question source;
 	
-	@Expose
 	 String targetCode;
-	@Expose
 	 String sourceCode;
 	
 

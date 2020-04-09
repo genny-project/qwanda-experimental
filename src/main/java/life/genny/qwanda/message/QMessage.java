@@ -3,7 +3,6 @@ package life.genny.qwanda.message;
 import java.io.Serializable;
 import java.util.List;
 
-import com.google.gson.annotations.Expose;
 
 public abstract class QMessage implements Serializable, QMessageIntf {
 
@@ -26,22 +25,16 @@ public abstract class QMessage implements Serializable, QMessageIntf {
 		return "QMessage [msg_type=" + msg_type + "]," + option.toString();
 	}
 
-	@Expose
 	 String msg_type;
 
-	@Expose
 	 String token;
 
-	@Expose
 	 String option = MsgOption.EXEC.toString();
 
-	@Expose
 	 String triggerCode; // This can be used to trigger any option
 
-	@Expose
 	 List<String> targetCodes;
 	
-	@Expose
 	 String sourceAddress;
 	
 

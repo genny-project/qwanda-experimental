@@ -2,9 +2,8 @@ package life.genny.qwanda;
 
 import java.io.IOException;
 import java.util.Properties;
+import io.vertx.core.json.JsonObject;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
 public class QwandaVersion {
 	
@@ -45,8 +44,8 @@ public class QwandaVersion {
 	
 	static public String getJson()
 	{
-		Gson gsonObj = new Gson();
-		String strJson =  gsonObj.toJson(getProperties());
+		String strJson =  JsonObject.mapFrom(getProperties()).toString();
+
 		return strJson;
 	}
 }

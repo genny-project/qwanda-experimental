@@ -52,7 +52,6 @@ import org.hibernate.annotations.ParamDef;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.google.gson.annotations.Expose;
 
 import life.genny.qwanda.Answer;
 import life.genny.qwanda.AnswerLink;
@@ -118,7 +117,6 @@ public class BaseEntity extends CodedEntity implements BaseEntityIntf {
   @OneToMany(fetch = FetchType.EAGER, mappedBy = "pk.baseEntity")
   @JsonBackReference(value="entityAttribute")
   @Cascade({CascadeType.MERGE,CascadeType.DELETE})
-  @Expose
 	@Filters( {
 	    @org.hibernate.annotations.Filter(name="filterAttribute", condition="attributeCode in (:attributeCodes)"),
 	    @org.hibernate.annotations.Filter(name="filterAttribute2", condition="attributeCode =:attributeCode")
@@ -131,11 +129,9 @@ public class BaseEntity extends CodedEntity implements BaseEntityIntf {
   @OneToMany(fetch = FetchType.EAGER, mappedBy = "pk.source")
   @JsonBackReference(value="entityEntity")
   @Cascade({CascadeType.MERGE,CascadeType.DELETE})
-  @Expose
   /* Stores the links of BaseEntity to another BaseEntity */
    Set<EntityEntity> links = new HashSet<EntityEntity>(0);
 
-  @Expose
   @Transient
    Set<EntityQuestion> questions = new HashSet<EntityQuestion>(0);
 

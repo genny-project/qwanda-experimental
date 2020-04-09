@@ -36,12 +36,8 @@ import org.hibernate.annotations.Type;
 import org.javamoney.moneta.Money;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.annotations.Expose;
-
+import io.vertx.core.json.JsonObject;
 import life.genny.qwanda.Link;
-import life.genny.qwanda.MoneyDeserializer;
 import life.genny.qwanda.attribute.Attribute;
 import life.genny.qwanda.converter.MoneyConverter;
 
@@ -69,7 +65,6 @@ public class EntityEntity implements java.io.Serializable, Comparable<Object> {
         @AttributeOverride(name = "rule", column = @Column(name = "RULE", nullable = true))
         
 	})
-	@Expose
 	 Link link ;
 	
 	 String realm;
@@ -100,78 +95,66 @@ public class EntityEntity implements java.io.Serializable, Comparable<Object> {
    */
 
   @Column(name = "created")
-  @Expose
    LocalDateTime created;
 
   /**
    * Stores the Last Modified UMT DateTime that this object was last updated
    */
   @Column(name = "updated")
-  @Expose
    LocalDateTime updated;
 
 
   /**
    * Store the Double value of the attribute for the baseEntity
    */
-  @Expose
    Double valueDouble;
 
   /**
    * Store the Boolean value of the attribute for the baseEntity
    */
-  @Expose
    Boolean valueBoolean;
   /**
    * Store the Integer value of the attribute for the baseEntity
    */
-  @Expose
    Integer valueInteger;
 
   /**
    * Store the Long value of the attribute for the baseEntity
    */
-  @Expose
    Long valueLong;
 
   /**
    * Store the LocalDateTime value of the attribute for the baseEntity
    */
 //  @XmlJavaTypeAdapter(LocalDateTimeAdapter.class)
-  @Expose
    LocalDateTime valueDateTime;
 
   /**
    * Store the LocalDate value of the attribute for the baseEntity
    */
 //  @XmlJavaTypeAdapter(LocalDateAdapter.class)
-  @Expose
    LocalDate valueDate;
  
   /**
    * Store the LocalTime value of the attribute for the baseEntity
    */
 //  @XmlJavaTypeAdapter(LocalTimeAdapter.class)
-  @Expose
    LocalTime valueTime;
  
 	@Column(name = "money", length = 128)
 	@Convert(converter = MoneyConverter.class)
-	@Expose
 	Money valueMoney;
 
   /**
    * Store the String value of the attribute for the baseEntity
    */
   @Type(type="text")
-  @Expose
    String valueString;
 
 
   /**
    * Store the relative importance of the attribute for the baseEntity
    */
-  @Expose
    Double weight;
 
    Long version = 1L;
@@ -609,9 +592,7 @@ public <T> void setValue(final Object value) {
 				setValueTime(date);
 			} else if (getPk().getAttribute().getDataType().getClassName()
 					.equalsIgnoreCase(Money.class.getCanonicalName())) {
-				GsonBuilder gsonBuilder = new GsonBuilder().registerTypeAdapter(Money.class, new MoneyDeserializer());
-				Gson gson = gsonBuilder.create();
-				Money money = gson.fromJson(result, Money.class);
+				Money money = JsonObject.mapFrom(result).mapTo(Money.class);
 				setValueMoney(money);
 			} else if (getPk().getAttribute().getDataType().getClassName()
 					.equalsIgnoreCase(Integer.class.getCanonicalName())) {
