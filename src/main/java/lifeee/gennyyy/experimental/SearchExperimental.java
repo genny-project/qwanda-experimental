@@ -10,7 +10,9 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
+import com.google.gson.Gson;
 import life.genny.qwanda.attribute.Attribute;
 import life.genny.qwanda.attribute.AttributeText;
 import life.genny.qwanda.attribute.EntityAttribute;
@@ -42,8 +44,9 @@ public class SearchExperimental {
   @POST
   @Consumes("application/json")
   @Path("/baseentitys/search")
+  @Produces("application/json")
   @Transactional
-  public String findBySearchBE(final BaseEntity searchBE) {
+  public QDataBaseEntityMessage findBySearchBE(final BaseEntity searchBE) {
 
           String stakeHolderCode = null;
 
@@ -60,13 +63,21 @@ public class SearchExperimental {
               }
 
           } catch (BadDataException e) {
-              return "bad";
+            return new QDataBaseEntityMessage();
           }
+		Long startTime = System.nanoTime();
           List<BaseEntity> results = service.findBySearchBE(searchBE);
           Long total = -1L;
 
+          System.out.println("###########################################################");
+
+          System.out.println("printingn all the results ");
+          
+          results.stream().forEach(System.out::println);
+          
           try {
-              total = service.findBySearchBECount(searchBE);
+            total = service.findBySearchBECount(searchBE);
+    		System.out.println("search count takes us to " + ((System.nanoTime() - startTime) / 1e6) + "ms");
 
           } catch (Exception e) {
               // TODO Auto-generated catch block
@@ -78,6 +89,7 @@ public class SearchExperimental {
               beArr = new BaseEntity[results.size()];
               beArr = results.toArray(beArr);
           } else {
+          System.out.println("Looks empty");
               beArr = new BaseEntity[0];
               total = 0L;
           }
@@ -86,11 +98,13 @@ public class SearchExperimental {
           String parentCode = searchBE.getCode();
           Optional<EntityAttribute> parentAttribute = searchBE.findEntityAttribute("SCH_SOURCE_CODE");
           if (parentAttribute.isPresent()) {
+          System.out.println("###3234########################################################");
               parentCode = parentAttribute.get().getValueString();
           }
           QDataBaseEntityMessage msg = new QDataBaseEntityMessage(beArr, parentCode, null);
           msg.setTotal(total);
-          return msg.toString();
+          String json = JsonUtils.toJson(msg);
+          return msg;
 
 
   }

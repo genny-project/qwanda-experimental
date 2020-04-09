@@ -1,0 +1,265 @@
+[
+  { 
+    "name" : "com.google.gson.reflect.TypeToken",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  { 
+    "name" : "life.genny.qwanda.datatype.LocalDateConverter",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  { 
+    "name" : "life.genny.qwanda.MoneyDeserializer",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  { 
+    "name" : "life.genny.qwanda.RangeDeserializer",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  { 
+    "name" : "life.genny.qwandautils.QwandaJsonUtils",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  { 
+    "name" : "life.genny.qwanda.DateTimeDeserializer",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  { 
+    "name" : "lifeee.gennyyy.experimental.JsonUtils",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.Streams",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.JsonNull",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.stream.JsonWriter",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.GsonBuilder",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.JsonParser",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.JsonPrimitive",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.JsonStreamParser",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.GsonBuilder",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.FieldAttributes",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.ObjectTypeAdapter",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.MapTypeAdapterFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.ArrayTypeAdapter",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.SqlDateTypeAdapter",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.TimeTypeAdapter",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.TypeAdapters",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.CollectionTypeAdapterFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.DateTypeAdapter",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.internal.bind.TypeAdapters",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "com.google.gson.Gson",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  }
+
+]
+
